@@ -1,6 +1,29 @@
+import { useState } from "react"
 import "./Main.css"
+import HabitCard from "../../components/HabitCard"
+import Stats from "../../components/Stats"
+import HabitForm from "../../components/HabitForm"
+const initialHabits = [
+    {
+        name: "Изучить React",
+        notificationTime: "7:00PM",
+        frequency: "daily",
+        streak: 9,
+        isToday: true,
+        color: "green"
+    },
+    {
+    name: "Почитать книжку",
+    notificationTime: "9:00PM",
+    frequency: "weekly",
+    streak: 11,
+    isToday: false,
+    color: "red"
+    }
+]
 
 const Main = () => {
+    const [habits, setHabits] = useState(initialHabits)
     return (
          <div className="container">
             <header>
@@ -8,32 +31,10 @@ const Main = () => {
                 <p className="subtitle">Build better habits, one day at a time</p>
             </header>
 
-            <div className="stats-grid">
-                <div className="stat-card">
-                    <div className="stat-value">5</div>
-                    <div className="stat-label">Active Habits</div>
-                </div>
-                <div className="stat-card">
-                    <div className="stat-value">87%</div>
-                    <div className="stat-label">Completion Rate</div>
-                </div>
-                <div className="stat-card">
-                    <div className="stat-value">23</div>
-                    <div className="stat-label">Day Streak</div>
-                </div>
-            </div>
+            <Stats habits={habits}/>
 
-            <div className="add-habit-section">
-                <h2>➕ Add New Habit</h2>
-                <form className="form-grid">
-                    <div className="form-group">
-                        <label for="habit-name">Habit Name</label>
-                        <input
-                            type="text"
-                            id="habit-name"
-                            placeholder="e.g., Morning Exercise"
-                            value="" />
-                    </div>
+            <HabitForm />
+            
 
                     <div className="form-row">
                         <div className="form-group">
@@ -84,13 +85,12 @@ const Main = () => {
                     <button type="button" className="btn btn-primary">
                         Add Habit
                     </button>
-                </form>
-            </div>
 
             <div className="habits-section">
                 <h2>📋 Today's Habits</h2>
+                {habits.map((el) => <HabitCard {...el}/>)}
 
-                <div className="habit-card" >
+                {/* <div className="habit-card" >
                     <div className="habit-info">
                         <div className="habit-name">Morning Meditation</div>
                         <div className="habit-meta">
@@ -188,7 +188,7 @@ const Main = () => {
                         <div className="streak-badge">🔥 5 days</div>
                         <button className="check-btn">○</button>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )
