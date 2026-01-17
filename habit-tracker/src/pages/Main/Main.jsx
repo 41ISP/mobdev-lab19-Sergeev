@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import "./Main.css"
 import HabitCard from "../../components/HabitCard"
 import Stats from "../../components/Stats"
@@ -23,7 +23,14 @@ const initialHabits = [
 ]
 
 const Main = () => {
-    const [habits, setHabits] = useState(initialHabits)
+    const [habits, setHabits] = useState([])
+    useEffect(() => {
+        const loadHabits = async () => {
+            const habits = await getObject("habits")
+            setHabits(habits)
+        }
+        loadHabits()
+   }, [])
     return (
          <div className="container">
             <header>
@@ -57,6 +64,8 @@ const Main = () => {
                                 value="07:00" />
                         </div>
                     </div>
+
+
 
                     <div className="form-group">
                         <label>Color Theme</label>
