@@ -9,7 +9,7 @@ export const router = createBrowserRouter([
         
     },
     {
-        path: "/history",
+        path: "/history:id",
         element: <History />
     }
 ])

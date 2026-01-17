@@ -1,8 +1,7 @@
-
-const HabitCard = ({name, notificationTime, frequency, streak, isToday, color}) => {
+const HabitCard = ({onClick, name, notificationTime, frequency, color, isToday, streak, toggleToday}) => {
     return (
-<div className="habit-card" >
-                    <div className="habit-info">
+        <div className="habit-card">
+                    <div className="habit-info" onClick={onClick}>
                         <div className="habit-name">{name}</div>
                         <div className="habit-meta">
                             <div className="habit-meta-item">
@@ -16,10 +15,11 @@ const HabitCard = ({name, notificationTime, frequency, streak, isToday, color}) 
                         </div>
                     </div>
                     <div className="habit-actions">
-                        <div className="streak-badge">🔥{streak} days</div>
-                        <button className={`check-btn${isToday ? " completed":""}`}>{isToday ? "✓" : "o"}</button>
+                        <div className="streak-badge">🔥 {streak} days</div>
+                        <button onClick={toggleToday} className={`check-btn${isToday ? " completed" : ""}`}>{isToday ? "✓" : "○"}</button>
                     </div>
                 </div>
     )
-                        }
-                export default HabitCard
+}
+
+export default HabitCard

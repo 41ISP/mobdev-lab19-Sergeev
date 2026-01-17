@@ -1,16 +1,18 @@
+import { useNavigate } from "react-router-dom"
 import "./History.css"
 
 const History = () => {
+    const navigate = useNavigate()
     return (
-         <div className="container">
+        <div class="container">
             <header>
-                <button className="back-btn">← Back to Dashboard</button>
+                <button class="back-btn" onClick={() => navigate("/")}>← Back to Dashboard</button>
                 <h1>📊 Progress Timeline</h1>
                 <div></div>
             </header>
 
-            <div className="filter-section">
-                <div className="filter-group">
+            <div class="filter-section">
+                <div class="filter-group">
                     <label>Select Habit:</label>
                     <select>
                         <option>Morning Meditation</option>
@@ -20,7 +22,7 @@ const History = () => {
                         <option>Practice Guitar</option>
                     </select>
                 </div>
-                <div className="filter-group">
+                <div class="filter-group">
                     <label>Time Period:</label>
                     <select>
                         <option>Last 7 Days</option>
@@ -31,180 +33,180 @@ const History = () => {
                 </div>
             </div>
 
-            <div className="habit-detail-card">
-                <div className="habit-header">
-                    <div className="habit-title-section">
-                        <div className="habit-title">🧘 Morning Meditation</div>
-                        <div className="habit-subtitle">
+            <div class="habit-detail-card">
+                <div class="habit-header">
+                    <div class="habit-title-section">
+                        <div class="habit-title">🧘 Morning Meditation</div>
+                        <div class="habit-subtitle">
                             Started on December 28, 2025 • Daily at 07:00 AM
                         </div>
                     </div>
-                    <div className="habit-stats-grid">
-                        <div className="stat-box">
-                            <div className="stat-box-value">15</div>
-                            <div className="stat-box-label">Current Streak</div>
+                    <div class="habit-stats-grid">
+                        <div class="stat-box">
+                            <div class="stat-box-value">15</div>
+                            <div class="stat-box-label">Current Streak</div>
                         </div>
-                        <div className="stat-box">
-                            <div className="stat-box-value">23</div>
-                            <div className="stat-box-label">Best Streak</div>
+                        <div class="stat-box">
+                            <div class="stat-box-value">23</div>
+                            <div class="stat-box-label">Best Streak</div>
                         </div>
-                        <div className="stat-box">
-                            <div className="stat-box-value">89%</div>
-                            <div className="stat-box-label">Success Rate</div>
+                        <div class="stat-box">
+                            <div class="stat-box-value">89%</div>
+                            <div class="stat-box-label">Success Rate</div>
                         </div>
-                        <div className="stat-box">
-                            <div className="stat-box-value">47</div>
-                            <div className="stat-box-label">Total Days</div>
+                        <div class="stat-box">
+                            <div class="stat-box-value">47</div>
+                            <div class="stat-box-label">Total Days</div>
                         </div>
                     </div>
                 </div>
 
-                <div className="chart-container">
-                    <div className="chart-title">30-Day Overview</div>
-                    <div className="progress-bar-container">
-                        <div className="progress-label">
+                <div class="chart-container">
+                    <div class="chart-title">30-Day Overview</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-label">
                             <span>Completion Rate</span>
                             <span><strong>27/30 days</strong></span>
                         </div>
-                        <div className="progress-bar">
-                            <div className="progress-fill" ></div>
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
                         </div>
                     </div>
-                    <div className="legend">
-                        <div className="legend-item">
+                    <div class="legend">
+                        <div class="legend-item">
                             <div
-                                className="legend-color"
-                               ></div>
+                                class="legend-color"
+                            ></div>
                             <span>Completed (27 days)</span>
                         </div>
-                        <div className="legend-item">
+                        <div class="legend-item">
                             <div
-                                className="legend-color"
-                                ></div>
+                                class="legend-color"
+                            ></div>
                             <span>Missed (3 days)</span>
                         </div>
                     </div>
                 </div>
 
-                <div className="timeline-section">
-                    <div className="timeline-header">
-                        <div className="timeline-title">Activity Timeline</div>
-                        <div className="view-toggle">
-                            <button className="view-btn active">Calendar</button>
-                            <button className="view-btn">List</button>
+                <div class="timeline-section">
+                    <div class="timeline-header">
+                        <div class="timeline-title">Activity Timeline</div>
+                        <div class="view-toggle">
+                            <button class="view-btn active">Calendar</button>
+                            <button class="view-btn">List</button>
                         </div>
                     </div>
 
-                    <div className="calendar-grid">
-                        <div className="calendar-header">Sun</div>
-                        <div className="calendar-header">Mon</div>
-                        <div className="calendar-header">Tue</div>
-                        <div className="calendar-header">Wed</div>
-                        <div className="calendar-header">Thu</div>
-                        <div className="calendar-header">Fri</div>
-                        <div className="calendar-header">Sat</div>
+                    <div class="calendar-grid">
+                        <div class="calendar-header">Sun</div>
+                        <div class="calendar-header">Mon</div>
+                        <div class="calendar-header">Tue</div>
+                        <div class="calendar-header">Wed</div>
+                        <div class="calendar-header">Thu</div>
+                        <div class="calendar-header">Fri</div>
+                        <div class="calendar-header">Sat</div>
 
-                        <div className="calendar-day completed">
-                            <div className="calendar-day-number">29</div>
+                        <div class="calendar-day completed">
+                            <div class="calendar-day-number">29</div>
                             <div>✓</div>
                         </div>
-                        <div className="calendar-day completed">
-                            <div className="calendar-day-number">30</div>
+                        <div class="calendar-day completed">
+                            <div class="calendar-day-number">30</div>
                             <div>✓</div>
                         </div>
-                        <div className="calendar-day completed">
-                            <div className="calendar-day-number">31</div>
+                        <div class="calendar-day completed">
+                            <div class="calendar-day-number">31</div>
                             <div>✓</div>
                         </div>
-                        <div className="calendar-day completed">
-                            <div className="calendar-day-number">1</div>
+                        <div class="calendar-day completed">
+                            <div class="calendar-day-number">1</div>
                             <div>✓</div>
                         </div>
-                        <div className="calendar-day completed">
-                            <div className="calendar-day-number">2</div>
+                        <div class="calendar-day completed">
+                            <div class="calendar-day-number">2</div>
                             <div>✓</div>
                         </div>
-                        <div className="calendar-day missed">
-                            <div className="calendar-day-number">3</div>
+                        <div class="calendar-day missed">
+                            <div class="calendar-day-number">3</div>
                             <div>✗</div>
                         </div>
-                        <div className="calendar-day completed">
-                            <div className="calendar-day-number">4</div>
+                        <div class="calendar-day completed">
+                            <div class="calendar-day-number">4</div>
                             <div>✓</div>
                         </div>
 
-                        <div className="calendar-day completed">
-                            <div className="calendar-day-number">5</div>
+                        <div class="calendar-day completed">
+                            <div class="calendar-day-number">5</div>
                             <div>✓</div>
                         </div>
-                        <div className="calendar-day completed">
-                            <div className="calendar-day-number">6</div>
+                        <div class="calendar-day completed">
+                            <div class="calendar-day-number">6</div>
                             <div>✓</div>
                         </div>
-                        <div className="calendar-day missed">
-                            <div className="calendar-day-number">7</div>
+                        <div class="calendar-day missed">
+                            <div class="calendar-day-number">7</div>
                             <div>✗</div>
                         </div>
-                        <div className="calendar-day completed">
-                            <div className="calendar-day-number">8</div>
+                        <div class="calendar-day completed">
+                            <div class="calendar-day-number">8</div>
                             <div>✓</div>
                         </div>
-                        <div className="calendar-day completed">
-                            <div className="calendar-day-number">9</div>
+                        <div class="calendar-day completed">
+                            <div class="calendar-day-number">9</div>
                             <div>✓</div>
                         </div>
-                        <div className="calendar-day completed">
-                            <div className="calendar-day-number">10</div>
+                        <div class="calendar-day completed">
+                            <div class="calendar-day-number">10</div>
                             <div>✓</div>
                         </div>
-                        <div className="calendar-day completed">
-                            <div className="calendar-day-number">11</div>
+                        <div class="calendar-day completed">
+                            <div class="calendar-day-number">11</div>
                             <div>✓</div>
                         </div>
 
-                        <div className="calendar-day completed">
-                            <div className="calendar-day-number">12</div>
+                        <div class="calendar-day completed">
+                            <div class="calendar-day-number">12</div>
                             <div>✓</div>
                         </div>
-                        <div className="calendar-day completed">
-                            <div className="calendar-day-number">13</div>
+                        <div class="calendar-day completed">
+                            <div class="calendar-day-number">13</div>
                             <div>✓</div>
                         </div>
-                        <div className="calendar-day completed">
-                            <div className="calendar-day-number">14</div>
+                        <div class="calendar-day completed">
+                            <div class="calendar-day-number">14</div>
                             <div>✓</div>
                         </div>
-                        <div className="calendar-day pending">
-                            <div className="calendar-day-number">15</div>
+                        <div class="calendar-day pending">
+                            <div class="calendar-day-number">15</div>
                             <div>○</div>
                         </div>
-                        <div className="calendar-day future">
-                            <div className="calendar-day-number">16</div>
+                        <div class="calendar-day future">
+                            <div class="calendar-day-number">16</div>
                         </div>
-                        <div className="calendar-day future">
-                            <div className="calendar-day-number">17</div>
+                        <div class="calendar-day future">
+                            <div class="calendar-day-number">17</div>
                         </div>
-                        <div className="calendar-day future">
-                            <div className="calendar-day-number">18</div>
+                        <div class="calendar-day future">
+                            <div class="calendar-day-number">18</div>
                         </div>
                     </div>
 
-                    <div className="list-view" >
-                        <div className="timeline-item">
-                            <div className="timeline-date">
-                                <div className="timeline-date-day">Tuesday</div>
-                                <div className="timeline-date-full">
+                    <div class="list-view">
+                        <div class="timeline-item">
+                            <div class="timeline-date">
+                                <div class="timeline-date-day">Tuesday</div>
+                                <div class="timeline-date-full">
                                     Jan 14, 2026
                                 </div>
                             </div>
-                            <div className="timeline-content">
-                                <div className="timeline-status">
-                                    <div className="status-icon completed">✓</div>
+                            <div class="timeline-content">
+                                <div class="timeline-status">
+                                    <div class="status-icon completed">✓</div>
                                     <div>
-                                        <div className="status-text completed">
+                                        <div class="status-text completed">
                                             Completed
                                         </div>
-                                        <div className="timeline-note">
+                                        <div class="timeline-note">
                                             Completed at 7:15 AM
                                         </div>
                                     </div>
@@ -212,21 +214,21 @@ const History = () => {
                             </div>
                         </div>
 
-                        <div className="timeline-item">
-                            <div className="timeline-date">
-                                <div className="timeline-date-day">Monday</div>
-                                <div className="timeline-date-full">
+                        <div class="timeline-item">
+                            <div class="timeline-date">
+                                <div class="timeline-date-day">Monday</div>
+                                <div class="timeline-date-full">
                                     Jan 13, 2026
                                 </div>
                             </div>
-                            <div className="timeline-content">
-                                <div className="timeline-status">
-                                    <div className="status-icon completed">✓</div>
+                            <div class="timeline-content">
+                                <div class="timeline-status">
+                                    <div class="status-icon completed">✓</div>
                                     <div>
-                                        <div className="status-text completed">
+                                        <div class="status-text completed">
                                             Completed
                                         </div>
-                                        <div className="timeline-note">
+                                        <div class="timeline-note">
                                             Completed at 7:05 AM
                                         </div>
                                     </div>
@@ -234,21 +236,21 @@ const History = () => {
                             </div>
                         </div>
 
-                        <div className="timeline-item">
-                            <div className="timeline-date">
-                                <div className="timeline-date-day">Sunday</div>
-                                <div className="timeline-date-full">
+                        <div class="timeline-item">
+                            <div class="timeline-date">
+                                <div class="timeline-date-day">Sunday</div>
+                                <div class="timeline-date-full">
                                     Jan 12, 2026
                                 </div>
                             </div>
-                            <div className="timeline-content">
-                                <div className="timeline-status">
-                                    <div className="status-icon completed">✓</div>
+                            <div class="timeline-content">
+                                <div class="timeline-status">
+                                    <div class="status-icon completed">✓</div>
                                     <div>
-                                        <div className="status-text completed">
+                                        <div class="status-text completed">
                                             Completed
                                         </div>
-                                        <div className="timeline-note">
+                                        <div class="timeline-note">
                                             Completed at 8:30 AM - Late start
                                         </div>
                                     </div>
@@ -256,21 +258,21 @@ const History = () => {
                             </div>
                         </div>
 
-                        <div className="timeline-item">
-                            <div className="timeline-date">
-                                <div className="timeline-date-day">Saturday</div>
-                                <div className="timeline-date-full">
+                        <div class="timeline-item">
+                            <div class="timeline-date">
+                                <div class="timeline-date-day">Saturday</div>
+                                <div class="timeline-date-full">
                                     Jan 11, 2026
                                 </div>
                             </div>
-                            <div className="timeline-content">
-                                <div className="timeline-status">
-                                    <div className="status-icon completed">✓</div>
+                            <div class="timeline-content">
+                                <div class="timeline-status">
+                                    <div class="status-icon completed">✓</div>
                                     <div>
-                                        <div className="status-text completed">
+                                        <div class="status-text completed">
                                             Completed
                                         </div>
-                                        <div className="timeline-note">
+                                        <div class="timeline-note">
                                             Completed at 7:00 AM
                                         </div>
                                     </div>
@@ -278,21 +280,21 @@ const History = () => {
                             </div>
                         </div>
 
-                        <div className="timeline-item">
-                            <div className="timeline-date">
-                                <div className="timeline-date-day">Friday</div>
-                                <div className="timeline-date-full">
+                        <div class="timeline-item">
+                            <div class="timeline-date">
+                                <div class="timeline-date-day">Friday</div>
+                                <div class="timeline-date-full">
                                     Jan 10, 2026
                                 </div>
                             </div>
-                            <div className="timeline-content">
-                                <div className="timeline-status">
-                                    <div className="status-icon completed">✓</div>
+                            <div class="timeline-content">
+                                <div class="timeline-status">
+                                    <div class="status-icon completed">✓</div>
                                     <div>
-                                        <div className="status-text completed">
+                                        <div class="status-text completed">
                                             Completed
                                         </div>
-                                        <div className="timeline-note">
+                                        <div class="timeline-note">
                                             Completed at 6:45 AM
                                         </div>
                                     </div>
@@ -300,21 +302,21 @@ const History = () => {
                             </div>
                         </div>
 
-                        <div className="timeline-item">
-                            <div className="timeline-date">
-                                <div className="timeline-date-day">Thursday</div>
-                                <div className="timeline-date-full">
+                        <div class="timeline-item">
+                            <div class="timeline-date">
+                                <div class="timeline-date-day">Thursday</div>
+                                <div class="timeline-date-full">
                                     Jan 9, 2026
                                 </div>
                             </div>
-                            <div className="timeline-content">
-                                <div className="timeline-status">
-                                    <div className="status-icon completed">✓</div>
+                            <div class="timeline-content">
+                                <div class="timeline-status">
+                                    <div class="status-icon completed">✓</div>
                                     <div>
-                                        <div className="status-text completed">
+                                        <div class="status-text completed">
                                             Completed
                                         </div>
-                                        <div className="timeline-note">
+                                        <div class="timeline-note">
                                             Completed at 7:20 AM
                                         </div>
                                     </div>
@@ -322,21 +324,21 @@ const History = () => {
                             </div>
                         </div>
 
-                        <div className="timeline-item">
-                            <div className="timeline-date">
-                                <div className="timeline-date-day">Wednesday</div>
-                                <div className="timeline-date-full">
+                        <div class="timeline-item">
+                            <div class="timeline-date">
+                                <div class="timeline-date-day">Wednesday</div>
+                                <div class="timeline-date-full">
                                     Jan 8, 2026
                                 </div>
                             </div>
-                            <div className="timeline-content">
-                                <div className="timeline-status">
-                                    <div className="status-icon completed">✓</div>
+                            <div class="timeline-content">
+                                <div class="timeline-status">
+                                    <div class="status-icon completed">✓</div>
                                     <div>
-                                        <div className="status-text completed">
+                                        <div class="status-text completed">
                                             Completed
                                         </div>
-                                        <div className="timeline-note">
+                                        <div class="timeline-note">
                                             Completed at 7:10 AM
                                         </div>
                                     </div>
@@ -344,21 +346,21 @@ const History = () => {
                             </div>
                         </div>
 
-                        <div className="timeline-item">
-                            <div className="timeline-date">
-                                <div className="timeline-date-day">Tuesday</div>
-                                <div className="timeline-date-full">
+                        <div class="timeline-item">
+                            <div class="timeline-date">
+                                <div class="timeline-date-day">Tuesday</div>
+                                <div class="timeline-date-full">
                                     Jan 7, 2026
                                 </div>
                             </div>
-                            <div className="timeline-content">
-                                <div className="timeline-status">
-                                    <div className="status-icon missed">✗</div>
+                            <div class="timeline-content">
+                                <div class="timeline-status">
+                                    <div class="status-icon missed">✗</div>
                                     <div>
-                                        <div className="status-text missed">
+                                        <div class="status-text missed">
                                             Missed
                                         </div>
-                                        <div className="timeline-note">
+                                        <div class="timeline-note">
                                             Woke up late
                                         </div>
                                     </div>
@@ -368,9 +370,7 @@ const History = () => {
                     </div>
                 </div>
             </div>
-        </div>
-
-    )
+        </div>)
 }
 
 export default History
